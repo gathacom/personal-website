@@ -1,12 +1,13 @@
 "use client";
  
 import { Tabs } from "../ui/tabs";
-import { FaHome, FaTools, FaCode, FaUserAstronaut, FaConnectdevelop, FaGithub } from "react-icons/fa";
+import { FaTools, FaUserAstronaut, FaConnectdevelop, FaGithub } from "react-icons/fa";
 import { SiPowerpages } from "react-icons/si";
+import { useRef } from "react";
 import AboutMe from "./Content/AboutMe";
 import TechStackAndTools from "./Content/TechStackAndTools";
 
-export function ContentTabs() {
+export function ContentTabs({ tabsRef }) {
   const tabs = [
     {
       title: <FaUserAstronaut/>,
@@ -59,7 +60,7 @@ export function ContentTabs() {
   ];
  
   return (
-    <div className="h-[20rem] md:h-[30rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-[100%]  items-start justify-start my-40 z-20">
+    <div ref={tabsRef} className="h-full md:h-[30rem] [perspective:1000px] relative flex flex-col max-w-5xl mx-auto w-[100%] items-start justify-start my-10 lg:my-0 z-20">
       <Tabs tabs={tabs} />
     </div>
   );

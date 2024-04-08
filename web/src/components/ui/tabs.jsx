@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/utils/cn";
+import { useScreenSize } from "@/hooks/useScreenSize";
 
 export const Tabs = ({
   tabs: propTabs,
@@ -13,6 +14,7 @@ export const Tabs = ({
 }) => {
   const [active, setActive] = useState(propTabs[0]);
   const [tabs, setTabs] = useState(propTabs);
+  // const screenSize = useScreenSize();
 
   const moveSelectedTabToTop = (idx) => {
     const newTabs = [...propTabs];
@@ -25,10 +27,10 @@ export const Tabs = ({
   const [hovering, setHovering] = useState(false);
 
   return (
-    <div className="flex flex-row w-full h-full pe-2 items-center">
+    <div className="flex flex-col lg:flex-row w-full h-[75%] md:h-full px-1 items-center">
       <div
         className={cn(
-          "flex flex-col items-center justify-start [perspective:1000px] relative overflow-auto sm:overflow-visible no-visible-scrollbar max-w-32 w-full gap-4 z-10",
+          "flex flex-row lg:flex-col items-center justify-start [perspective:1000px] relative overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full lg:w-[15%] gap-2 md:gap-4 z-10",
           containerClassName
         )}
       >
@@ -82,7 +84,7 @@ export const FadeInDiv = ({
     return tab.value === tabs[0].value;
   };
   return (
-    <div className="relative w-full h-full me-20">
+    <div className="relative w-full h-full lg:h-[90%] lg:me-20">
       {tabs.map((tab, idx) => (
         <motion.div
           key={tab.value}

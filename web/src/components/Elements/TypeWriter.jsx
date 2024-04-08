@@ -4,11 +4,11 @@ export function Typewriter() {
   const words = [
     {
       text: "I'm",
-      className: "text-secondary dark:text-primary",
+      className: "text-secondary text-lg dark:text-primary",
     },
     {
       text: "Fullstack Web Developer",
-      className: "text-emerald-400 dark:text-emerald-400",
+      className: "text-emerald-400 text-lg dark:text-emerald-400",
     },
   ];
   return (
