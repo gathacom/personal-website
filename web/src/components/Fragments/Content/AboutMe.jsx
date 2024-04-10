@@ -2,6 +2,7 @@ import { Button } from "@/components/Elements/Button/Index";
 import React from "react";
 import MetaButton from "../MetaButton";
 import HeadContent from "@/components/Elements/HeadContent";
+import { FaFileDownload } from "react-icons/fa";
 
 const AboutMe = () => {
   return (
@@ -31,9 +32,9 @@ const AboutMe = () => {
         </div>
         <MetaButton
           variant="secondary"
-          classname="w-[50%] md:w-[25%] text-sm h-10"
+          classname="w-[50%] md:w-[25%] text-sm h-10 transition-all bg-gradient-to-br from-secondary to-emerald-500  shadow-lg shadow-foreground rounded-s-3xl"
           >
-          Download CV
+          Download CV <span className="ml-2"><FaFileDownload></FaFileDownload></span>
         </MetaButton>
       </div>
     </>
