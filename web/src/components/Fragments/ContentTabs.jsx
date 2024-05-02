@@ -6,6 +6,7 @@ import { SiPowerpages } from "react-icons/si";
 import { useRef } from "react";
 import AboutMe from "./Content/AboutMe";
 import TechStackAndTools from "./Content/TechStackAndTools";
+import Portfolio from "./Content/Portfolio";
 
 export function ContentTabs({ tabsRef }) {
   const tabs = [
@@ -31,9 +32,8 @@ export function ContentTabs({ tabsRef }) {
       title: <SiPowerpages/>,
       value: "portfolio",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-secondary/50">
-          <p>Portfolio</p>
-          <DummyContent />
+        <div className="content-tab">
+          <Portfolio />
         </div>
       ),
     },

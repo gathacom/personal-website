@@ -5,6 +5,11 @@ import HeadContent from "@/components/Elements/HeadContent";
 import { FaFileDownload } from "react-icons/fa";
 
 const AboutMe = () => {
+  
+  const handleDownloadCV = () => {
+    
+  }
+
   return (
     <>
     <HeadContent>About Me .</HeadContent>
@@ -32,7 +37,8 @@ const AboutMe = () => {
         </div>
         <MetaButton
           variant="secondary"
-          classname="w-[50%] md:w-[25%] text-sm h-10 transition-all bg-gradient-to-br from-secondary to-emerald-500  shadow-lg shadow-foreground rounded-s-3xl"
+          classname="w-[75%] md:w-[50%] text-sm h-10 transition-all bg-gradient-to-br from-secondary to-emerald-500  shadow-lg shadow-foreground rounded-s-3xl"
+          onClick={handleDownloadCV}
           >
           Download CV <span className="ml-2"><FaFileDownload></FaFileDownload></span>
         </MetaButton>
