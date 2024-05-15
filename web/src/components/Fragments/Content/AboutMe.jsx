@@ -1,14 +1,17 @@
 import { Button } from "@/components/Elements/Button/Index";
-import React from "react";
-import MetaButton from "../MetaButton";
+import React, { useCallback } from "react";
+import MainButton from "../MetaButton";
 import HeadContent from "@/components/Elements/HeadContent";
 import { FaFileDownload } from "react-icons/fa";
 
 const AboutMe = () => {
   
-  const handleDownloadCV = () => {
-    
-  }
+  const handleDownloadCV = useCallback(() => {
+    const link = document.createElement("a")
+    link.href = "/file/Yoga Agatha Pasaribu-resume.pdf";
+    link.download = "Yoga Agatha Pasaribu-resume.pdf";
+    link.click();
+  },[])
 
   return (
     <>
@@ -35,13 +38,14 @@ const AboutMe = () => {
             </p>
           </div>
         </div>
-        <MetaButton
+        <MainButton
           variant="secondary"
-          classname="w-[75%] md:w-[50%] text-sm h-10 transition-all bg-gradient-to-br from-secondary to-emerald-500  shadow-lg shadow-foreground rounded-s-3xl"
+          classname="w-[75%] md:w-[50%] text-sm h-10 transition-all bg-gradient-to-br from-secondary to-emerald-500  shadow-lg shadow-foreground rounded-s-3xl mb-10"
           onClick={handleDownloadCV}
+          
           >
           Download CV <span className="ml-2"><FaFileDownload></FaFileDownload></span>
-        </MetaButton>
+        </MainButton>
       </div>
     </>
   );

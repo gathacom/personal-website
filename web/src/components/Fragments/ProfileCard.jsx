@@ -21,7 +21,7 @@ const ProfileCard = () => {
             bg-clip-text bg-gradient-to-r from-secondary to-emerald-500 dark:bg-gradient-to-br dark:from-primary  dark:to-emerald-500"
           >
             <span className="flex flex-col justify-center items-center">
-              Yoga Agatha <span>Pasaribu {screenSize}</span>{" "}
+              Yoga Agatha <span>Pasaribu</span>{" "}
             </span>
             
           </h3>
