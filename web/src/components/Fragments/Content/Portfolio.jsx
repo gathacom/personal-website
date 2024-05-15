@@ -8,26 +8,65 @@ const Portfolio = () => {
     const portfolios = [
         {
             title: "StepUp Projects",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt voluptatibus est atque eos corporis ipsum labore rerum odit ullam fugiat.",
-            image: "./images/portfolio/portfolio-card-1.png"
+            description: "StepUp Projects is a website profile for a website development and design service provider",
+            image: "./images/portfolio/portfolio-card-2.png",
+            stacks: [
+              {
+                name: "React",
+                color: "61dbfb"
+              },
+              {
+                name: "Express",
+                color: "292929"
+              },
+              {
+                name: "MongoDB",
+                color: "08ee69"
+              },
+            ]
+        },
+        {
+            title: "Best Point",
+            description: "Best Point is a web application that is similar to Yelp, this is for people who wants to find some good place",
+            image: "./images/portfolio/portfolio-card-3.jpg",
+            stacks: [
+              {
+                name: "EJS",
+                color: "b4ca65"
+              },
+              {
+                name: "Express",
+                color: "292929"
+              },
+              {
+                name: "MongoDB",
+                color: "08ee69"
+              },
+              {
+                name: "HERE Maps",
+                color: "08ee69"
+              },
+            ]
             
         },
         {
-            title: "E-commerce",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt voluptatibus est atque eos corporis ipsum labore rerum odit ullam fugiat.",
-            image: "./images/portfolio/portfolio-card-1.png"
-            
-        },
-        {
-            title: "Blogging Site",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt voluptatibus est atque eos corporis ipsum labore rerum odit ullam fugiat.",
-            image: "./images/portfolio/portfolio-card-1.png"
-            
-        },
-        {
-            title: "Music Website",
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt voluptatibus est atque eos corporis ipsum labore rerum odit ullam fugiat.",
-            image: "./images/portfolio/portfolio-card-1.png"
+            title: "Gustoro CoffeeShop",
+            description: "Gustoro CoffeeShop is a website for coffee shop. There are some feature in this website like reservation, order for user, and CRUD Product for admin.",
+            image: "./images/portfolio/portfolio-card-4.png",
+            stacks: [
+              {
+                name: "PHP",
+                color: "61dbfb"
+              },
+              {
+                name: "MySQL",
+                color: "292929"
+              },
+              {
+                name: "Bootstrap",
+                color: "08ee69"
+              },
+            ]
             
         },
     ]
@@ -36,7 +75,7 @@ const Portfolio = () => {
     desktop: {
       breakpoint: { max : 3000, min: 1024 },
       items: 2,
-      slidesToSlide: 2, // optional, default to 1.
+      slidesToSlide: 1, // optional, default to 1.
     },
     tablet: {
       breakpoint: { max: 1024, min: 768 },
@@ -66,7 +105,7 @@ const Portfolio = () => {
         itemClass="carousel-item-padding-20-px"
         arrows={true}
         containerClass="carousel-container"
-        className="flex items-center justify-center px-2 bg-foreground "
+        className="flex items-center justify-center px-2 mt-2"
       >
         {portfolios.map((portfolio, index) => (
             <PortfolioCard key={index} {...portfolio} ></PortfolioCard>
