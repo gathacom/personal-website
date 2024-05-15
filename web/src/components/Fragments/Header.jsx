@@ -25,13 +25,13 @@ const Header = (props) => {
   return (
     <>
       <div className="bg-transparent w-full flex justify-end absolute top-5 right-5 z-10">
-        <Button variant="icon" size="md" className="me-5" onClick={handleTheme} {...props}>
+        {/* <Button variant="icon" size="md" className="me-5" onClick={handleTheme} {...props}>
           {darkTheme ? (
             <MdDarkMode className="w-6 h-6" />
             ) : (
             <MdLightMode className="w-6 h-6" color="#18181b" />
           )}
-        </Button>
+        </Button> */}
       </div>
     </>
   );

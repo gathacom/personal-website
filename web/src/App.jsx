@@ -6,6 +6,7 @@ import { BackgroundBeams } from "./components/ui/background-beams";
 import ContentTabs from "./components/Fragments/ContentTabs";
 import { useScreenSize } from "./hooks/useScreenSize";
 import { GetToKnow } from "./components/Elements/GetToKnow";
+import Footer from "./components/Fragments/Footer";
 // import { Button } from "./components/ui/button"
 
 const App = () => {
@@ -31,6 +32,7 @@ const App = () => {
         </div>
       </div>
       <BackgroundBeams isDark={isDark} />
+      <Footer></Footer>
     </>
   );
 };

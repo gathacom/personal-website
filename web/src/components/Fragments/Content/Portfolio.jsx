@@ -5,7 +5,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 const Portfolio = () => {
-    const portfolios = [
+  const portfolios = [
         {
             title: "StepUp Projects",
             description: "StepUp Projects is a website profile for a website development and design service provider",
