@@ -13,15 +13,15 @@ const Portfolio = () => {
             stacks: [
               {
                 name: "React",
-                color: "61dbfb"
+                color: "#61dbfb"
               },
               {
                 name: "Express",
-                color: "292929"
+                color: "#292929"
               },
               {
                 name: "MongoDB",
-                color: "08ee69"
+                color: "#08ee69"
               },
             ]
         },
@@ -74,7 +74,7 @@ const Portfolio = () => {
   const responsive = {
     desktop: {
       breakpoint: { max : 3000, min: 1024 },
-      items: 2,
+      items: 1,
       slidesToSlide: 1, // optional, default to 1.
     },
     tablet: {
@@ -87,6 +87,10 @@ const Portfolio = () => {
       items: 1,
       slidesToSlide: 1, // optional, default to 1.
     },
+  };
+  const CustomRightArrow = ({ onClick, ...rest }) => {
+    // onMove means if dragging or swiping in progress.
+    return <button className="hidden" />;
   };
   return (
     <>
@@ -103,7 +107,7 @@ const Portfolio = () => {
         dotListClass="custom-dot-list-style"
         // removeArrowOnDeviceType={["tablet", "mobile"]}
         itemClass="carousel-item-padding-20-px"
-        arrows={true}
+        customRightArrow={<CustomRightArrow />}
         containerClass="carousel-container"
         className="flex items-center justify-center px-2 mt-2"
       >
